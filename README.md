@@ -8,6 +8,29 @@
 
 > **Python 스타터 템플릿입니다.** 다른 언어면 언어 무관 [github-basic-base](https://github.com/hyeongyu-data/github-basic-base)를 쓰세요. `Use this template` 버튼 또는 `gh repo create <이름> --template hyeongyu-data/github-basic-python`.
 
+## 🚀 새 프로젝트 시작 (셋업)
+
+1. **템플릿으로 레포 생성** — 위 `Use this template` 버튼, 또는:
+   ```shell
+   gh repo create <이름> --template hyeongyu-data/github-basic-python --private --clone
+   ```
+2. **placeholder 채우기** — `LICENSE`(이름·연도), `README.md`, `CLAUDE.md`(프로젝트 설명), `src/`·`tests/`(예시 코드 교체).
+3. **로컬 세팅:**
+   ```shell
+   pip install pre-commit && pre-commit install   # 커밋 전 자동 검사
+   git config commit.template .gitmessage          # 커밋 메시지 양식
+   ```
+4. **main 브랜치 보호 적용** — 템플릿은 파일만 복제되므로 ruleset은 직접 걸어야 합니다(레포가 public이거나 GitHub Pro 필요). 혼자 쓰면 파일에서 `required_approving_review_count`를 `0`으로:
+   ```shell
+   gh api repos/<owner>/<repo>/rulesets --method POST --input branch_ruleset_main.json
+   ```
+5. **릴리스** — 라벨별 자동 분류(`.github/release.yml`):
+   ```shell
+   gh release create v0.1.0 --generate-notes
+   ```
+
+> 1·3·4를 한 방에: `newproj <이름> [python|base] [private|public]` 헬퍼(`~/.newproj.zsh`).
+
 ## Prerequisites
 
 - Python 3.11+
