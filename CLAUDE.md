@@ -3,9 +3,8 @@
 > Version: 0.1.0 | Last Updated: 2026-07-15
 
 이 문서는 Claude Code 등 AI 코딩 에이전트가 이 저장소에서 작업할 때의 기본
-진입점입니다. 필수 규칙은 짧게 유지하고, 상세 가이드는 `.claude/docs/`를
-참조합니다. `AGENTS.md`는 이 파일의 symlink이며, `.agents`는 `.claude`의
-symlink입니다.
+진입점입니다. `AGENTS.md`는 이 파일의 symlink입니다. 상세 워크플로는
+`CONTRIBUTING.md`를 따릅니다.
 
 ## 언어 원칙
 
@@ -18,16 +17,15 @@ symlink입니다.
 
 1. 사용자의 명시적 요청
 2. `CLAUDE.md` 및 `AGENTS.md`
-3. `.claude/docs/` 하위 가이드
-4. `README.md`, `CONTRIBUTING.md`, 기타 저장소 문서
+3. `CONTRIBUTING.md`, `README.md`, 기타 저장소 문서
 
 같은 수준이면 더 구체적이고 더 최근에 갱신된 규칙을 우선합니다.
 
 ## 프로젝트 맥락
 
 - <프로젝트 한 줄 설명을 여기에 적으세요.>
-- 소스: `src/`, 테스트: `tests/`, 문서: `README.md` / `.claude/docs/`.
-- 상세 워크플로: `.claude/docs/agent-workflow-reference.md`.
+- 소스: `src/`, 테스트: `tests/`, 문서: `README.md`.
+- 상세 워크플로(브랜치·커밋·PR): `CONTRIBUTING.md`.
 
 ## 핵심 규칙
 

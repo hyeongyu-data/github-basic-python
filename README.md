@@ -15,8 +15,8 @@
 
 ```shell
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-pre-commit install   # 커밋 전 자동 검사 훅 설치 (최초 1회)
+pip install ruff pytest pre-commit   # 개발 도구 (런타임 의존성은 pyproject.toml에 추가)
+pre-commit install                   # 커밋 전 자동 검사 훅 (최초 1회)
 ```
 
 ## Usage
@@ -37,28 +37,23 @@ pytest
 
 ```
 .
-├── .github/                 # 이슈·PR 템플릿, CI 워크플로
-├── .claude/docs/            # AI 에이전트 상세 가이드
+├── .github/                 # 이슈·PR 템플릿, CI, dependabot
 ├── src/                     # 소스 코드
 ├── tests/                   # 테스트
 ├── CLAUDE.md                # AI 코딩 에이전트 진입점
 ├── AGENTS.md → CLAUDE.md    # symlink
-├── .agents → .claude        # symlink
 ├── branch_ruleset_main.json # main 브랜치 보호 규칙 (GitHub Ruleset import용)
-├── .editorconfig            # 에디터 공통 설정
-├── .python-version
-├── .gitignore
-├── .pre-commit-config.yaml
 ├── CONTRIBUTING.md
 ├── LICENSE
-├── pyproject.toml           # 도구 설정 (ruff 등)
-└── requirements.txt
+├── pyproject.toml           # 의존성 + 도구 설정 (ruff 등)
+├── .editorconfig .gitattributes .gitignore .gitmessage .python-version
+└── .pre-commit-config.yaml
 ```
 
 ## AI 에이전트 (Claude Code 등)
 
-[`CLAUDE.md`](CLAUDE.md)가 진입점이고 상세 규칙은 `.claude/docs/`에 있습니다.
-`AGENTS.md`는 `CLAUDE.md`의, `.agents`는 `.claude`의 symlink입니다.
+[`CLAUDE.md`](CLAUDE.md)가 진입점입니다. `AGENTS.md`는 그 symlink이고, 상세
+워크플로는 [`CONTRIBUTING.md`](CONTRIBUTING.md)를 따릅니다.
 
 ## Contributing
 
