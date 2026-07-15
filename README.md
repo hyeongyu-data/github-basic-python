@@ -37,17 +37,28 @@ pytest
 
 ```
 .
-├── .github/            # 이슈·PR 템플릿, CI 워크플로
-├── src/                # 소스 코드
-├── tests/              # 테스트
-├── .editorconfig       # 에디터 공통 설정
+├── .github/                 # 이슈·PR 템플릿, CI 워크플로
+├── .claude/docs/            # AI 에이전트 상세 가이드
+├── src/                     # 소스 코드
+├── tests/                   # 테스트
+├── CLAUDE.md                # AI 코딩 에이전트 진입점
+├── AGENTS.md → CLAUDE.md    # symlink
+├── .agents → .claude        # symlink
+├── branch_ruleset_main.json # main 브랜치 보호 규칙 (GitHub Ruleset import용)
+├── .editorconfig            # 에디터 공통 설정
+├── .python-version
 ├── .gitignore
 ├── .pre-commit-config.yaml
 ├── CONTRIBUTING.md
 ├── LICENSE
-├── pyproject.toml      # 도구 설정 (ruff 등)
+├── pyproject.toml           # 도구 설정 (ruff 등)
 └── requirements.txt
 ```
+
+## AI 에이전트 (Claude Code 등)
+
+[`CLAUDE.md`](CLAUDE.md)가 진입점이고 상세 규칙은 `.claude/docs/`에 있습니다.
+`AGENTS.md`는 `CLAUDE.md`의, `.agents`는 `.claude`의 symlink입니다.
 
 ## Contributing
 

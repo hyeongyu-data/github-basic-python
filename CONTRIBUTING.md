@@ -1,30 +1,37 @@
 # Contributing
 
-## 브랜치 규칙
-
-`main`에 직접 커밋하지 않고 브랜치를 만들어 PR로 병합합니다.
-
-```
-feat-{ISSUE}/{짧은-설명}    # 예: feat-12/add-login
-fix-{ISSUE}/{짧은-설명}     # 예: fix-31/null-check
-```
-
 ## 작업 흐름
 
-1. 이슈를 만들거나 담당 이슈를 정합니다.
-2. 위 규칙으로 브랜치를 만듭니다: `git checkout -b feat-12/add-login`
-3. 커밋 전 검사가 통과하는지 확인합니다 (`pre-commit install` 후 자동 실행).
-4. 푸시하고 PR을 엽니다. PR 본문에 `Closes #이슈번호`를 넣습니다.
-5. 리뷰 승인 + CI 통과 후 병합합니다.
+```
+이슈 → 브랜치 → 작업 → Draft PR → 셀프 리뷰 → Ready → 리뷰 → Squash merge
+```
+
+`main`에는 직접 push하지 않습니다. 모든 변경은 PR로 병합합니다
+(`branch_ruleset_main.json`을 GitHub Ruleset으로 import하면 강제됩니다).
+
+## 브랜치 규칙
+
+이슈의 `Create a branch`로 만들고, 이름은 소문자·하이픈으로:
+
+```
+<type>/<issue#>-설명      # 예: feat/42-add-login, fix/31-null-check
+```
 
 ## 커밋 메시지
 
-한 줄 요약(50자 내외) + 필요 시 본문. 관례상 접두어를 권장합니다:
-`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
+`<type>: <설명>` (한국어, 50자 내외). type:
+`feat`, `fix`, `refactor`, `docs`, `test`, `chore`
+
+## PR
+
+1. 본문에 `Closes #<issue>` 포함.
+2. Draft로 열어 모든 diff를 셀프 리뷰한 뒤 Ready로 전환.
+3. CI(`lint-test`) 통과 + 리뷰 승인 + 모든 대화 resolved 후 **squash merge**.
 
 ## 코드 스타일
 
-`ruff`(린트+포맷)로 통일합니다. 커밋 훅이 자동으로 정리하며, 수동 확인은:
+`ruff`(린트+포맷)로 통일합니다. `pre-commit install` 후 커밋 시 자동 정리되며,
+수동 확인은:
 
 ```shell
 ruff check . && ruff format --check .
