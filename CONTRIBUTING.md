@@ -22,6 +22,13 @@
 `<type>: <설명>` (한국어, 50자 내외). type:
 `feat`, `fix`, `refactor`, `docs`, `test`, `chore`
 
+커밋 템플릿(`.gitmessage`)이 제공됩니다. 클론 후 한 번 설정하면 `git commit` 시
+자동으로 채워집니다:
+
+```shell
+git config commit.template .gitmessage
+```
+
 ## PR
 
 1. 본문에 `Closes #<issue>` 포함.
