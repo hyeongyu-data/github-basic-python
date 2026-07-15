@@ -38,10 +38,12 @@ pytest
 ```
 .
 ├── .github/                 # 이슈·PR 템플릿, CI, dependabot
+├── .claude/docs/            # AI 에이전트 참고 문서 (워크플로/리뷰/보안/금지)
 ├── src/                     # 소스 코드
 ├── tests/                   # 테스트
 ├── CLAUDE.md                # AI 코딩 에이전트 진입점
 ├── AGENTS.md → CLAUDE.md    # symlink
+├── .agents → .claude        # symlink
 ├── branch_ruleset_main.json # main 브랜치 보호 규칙 (GitHub Ruleset import용)
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -52,8 +54,9 @@ pytest
 
 ## AI 에이전트 (Claude Code 등)
 
-[`CLAUDE.md`](CLAUDE.md)가 진입점입니다. `AGENTS.md`는 그 symlink이고, 상세
-워크플로는 [`CONTRIBUTING.md`](CONTRIBUTING.md)를 따릅니다.
+[`CLAUDE.md`](CLAUDE.md)가 진입점이고 상세 참고 문서는 `.claude/docs/`에
+있습니다 (워크플로·코드리뷰·계획리뷰·보안·금지사항). `AGENTS.md`는
+`CLAUDE.md`의, `.agents`는 `.claude`의 symlink입니다.
 
 ## Contributing
 
