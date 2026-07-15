@@ -62,7 +62,7 @@ pytest
 
 ## Contributing
 
-[CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요. 브랜치 규칙은 `feat-{ISSUE}/{설명}` 형식입니다.
+[CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요. 브랜치 규칙은 `<type>/<issue#>-설명` 형식입니다 (예: `feat/42-add-login`).
 
 ## License
 

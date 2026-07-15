@@ -15,3 +15,4 @@ select = ["E", "F", "I", "UP", "B"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]   # bare `pytest`가 리포 루트를 sys.path에 넣어 src/ import 가능
