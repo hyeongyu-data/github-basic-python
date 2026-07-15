@@ -6,6 +6,8 @@
 <!-- ![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg) -->
 <!-- ![License](https://img.shields.io/badge/license-MIT-blue.svg) -->
 
+> **Python 스타터 템플릿입니다.** 다른 언어면 언어 무관 [github-basic-base](https://github.com/hyeongyu-data/github-basic-base)를 쓰세요. `Use this template` 버튼 또는 `gh repo create <이름> --template hyeongyu-data/github-basic-python`.
+
 ## Prerequisites
 
 - Python 3.11+
