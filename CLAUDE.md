@@ -19,15 +19,27 @@ symlink입니다.
 1. 사용자의 명시적 요청
 2. `CLAUDE.md` 및 `AGENTS.md`
 3. `.claude/docs/` 하위 가이드
-4. `README.md`, `CONTRIBUTING.md`, 기타 저장소 문서
+4. `CONTRIBUTING.md`, `README.md`, 기타 저장소 문서
 
 같은 수준이면 더 구체적이고 더 최근에 갱신된 규칙을 우선합니다.
+
+## 문서 탐색 기준
+
+비자명한 변경을 하기 전에 가장 관련 있는 가이드를 먼저 확인합니다:
+
+| 요청 유형 | 먼저 볼 문서 |
+| --- | --- |
+| 워크플로우, 커밋, PR | `.claude/docs/agent-workflow-reference.md` |
+| 보안, 시크릿, 권한 | `.claude/docs/agent-security-guidelines.md` |
+| 코드/diff 리뷰 | `.claude/docs/agent-peer-review.md` |
+| 계획 리뷰 | `.claude/docs/agent-plan-review.md` |
+| 해서는 안 되는 일 | `.claude/docs/agent-prohibitions.md` |
 
 ## 프로젝트 맥락
 
 - <프로젝트 한 줄 설명을 여기에 적으세요.>
 - 소스: `src/`, 테스트: `tests/`, 문서: `README.md` / `.claude/docs/`.
-- 상세 워크플로: `.claude/docs/agent-workflow-reference.md`.
+- 상세 워크플로(브랜치·커밋·PR): `.claude/docs/agent-workflow-reference.md`.
 
 ## 핵심 규칙
 
