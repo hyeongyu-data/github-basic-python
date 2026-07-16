@@ -38,6 +38,16 @@ Issue 자동 close
 - 이슈·PR 기본값: Assignee는 생성자로 지정합니다
   (`gh issue create`·`gh pr create`에 `--assignee @me`).
 
+## 자동 담당자 및 라벨
+
+- Feature·Bug Issue Form은 `hyeongyu-data`를 담당자로 자동 지정하고 각각
+  `feature`, `bug` 라벨을 붙입니다.
+- PR은 생성자를 담당자로 자동 지정합니다. 제목이 커밋 컨벤션의 type으로 시작하면
+  다음 라벨을 추가합니다: `feat` → `feature`, `fix` → `bug`, `refactor` →
+  `refactor`, `docs` → `documentation`, `test` → `test`, `chore` → `chore`.
+- 자동화는 PR 코드를 checkout하거나 실행하지 않습니다. 템플릿을 다른 계정에서
+  사용할 때에는 Issue Form의 `assignees` 값을 해당 계정으로 바꿉니다.
+
 ## 이슈 생성
 
 Issue Forms(`.github/ISSUE_TEMPLATE/`, 빈 이슈 생성 불가):
