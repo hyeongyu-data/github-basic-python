@@ -2,6 +2,7 @@ name: Bug
 description: 버그를 보고합니다.
 title: "[BUG] "
 labels: ["bug"]
+assignees: ["hyeongyu-data"]
 body:
   - type: markdown
     attributes:
