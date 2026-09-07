@@ -28,6 +28,11 @@
    ```shell
    gh release create v0.1.0 --generate-notes
    ```
+6. **(선택) 자동 PR 리뷰** — `.github/workflows/pr-review.yml`은 PR diff를 무료 LLM(Google Gemini 무료 티어)에 보내 요약 코멘트를 남깁니다. [AI Studio](https://aistudio.google.com/apikey)에서 무료 키를 발급받아 시크릿으로 등록하면 동작합니다(미등록 시 안내 코멘트만, 머지는 막지 않음):
+   ```shell
+   gh secret set GEMINI_API_KEY --repo <owner>/<repo>
+   ```
+   PR에 `/pr-review` 코멘트로 수동 재실행할 수 있습니다.
 
 > 1·3·4를 한 방에: `newproj <이름> [python|base] [private|public]` 헬퍼(`~/.newproj.zsh`).
 
