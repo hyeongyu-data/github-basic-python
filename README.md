@@ -52,6 +52,17 @@ from src.main import add
 print(add(10, 5))  # 15
 ```
 
+### 할 일 목록 CLI
+
+```shell
+python -m src.todo add "우유 사기"
+python -m src.todo list          # 1. [ ] 우유 사기
+python -m src.todo done 1         # 1번 완료 표시
+python -m src.todo rm 1           # 1번 삭제
+```
+
+저장 파일은 `--file` 인자 → `TODO_FILE` 환경변수 → 기본 `~/.todo.json` 순으로 결정됩니다.
+
 ## Test
 
 ```shell
