@@ -112,10 +112,10 @@ close되고 브랜치가 삭제됩니다.
 ### 자동 PR 리뷰 (pr-review.yml)
 
 PR이 열리거나(`opened` / `ready_for_review`, 문서 전용 변경 제외) PR에
-`/pr-review` 코멘트를 남기면 무료 LLM이 diff를 리뷰해 sticky 요약 코멘트를
-답니다. `GEMINI_API_KEY` 시크릿이 필요하며, 없거나 실패해도 머지를 막지
-않습니다(soft-fail, required check 아님). 참고용이며 사람 리뷰를 대체하지
-않습니다.
+`/pr-review` 코멘트를 남기면 무료 LLM(Groq)이 diff를 리뷰해 sticky 요약
+코멘트를 답니다. `GROQ_API_KEY` 시크릿이 필요하며, 없거나 실패해도 머지를
+막지 않습니다(soft-fail, required check 아님). 참고용이며 사람 리뷰를
+대체하지 않습니다.
 
 ## Special Cases
 
