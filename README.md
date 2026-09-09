@@ -28,6 +28,11 @@
    ```shell
    gh release create v0.1.0 --generate-notes
    ```
+6. **(선택) 자동 PR 리뷰** — `.github/workflows/pr-review.yml`은 PR diff를 무료 LLM(Groq 무료 티어)에 보내 요약 코멘트를 남깁니다. [Groq 콘솔](https://console.groq.com)에서 무료 키를 발급받아(신용카드 불필요) 시크릿으로 등록하면 동작합니다(미등록 시 안내 코멘트만, 머지는 막지 않음):
+   ```shell
+   gh secret set GROQ_API_KEY --repo <owner>/<repo>
+   ```
+   PR에 `/pr-review` 코멘트로 수동 재실행할 수 있습니다.
 
 > 1·3·4를 한 방에: `newproj <이름> [python|base] [private|public]` 헬퍼(`~/.newproj.zsh`).
 
@@ -51,6 +56,17 @@ from src.main import add
 
 print(add(10, 5))  # 15
 ```
+
+### 할 일 목록 CLI
+
+```shell
+python -m src.todo add "우유 사기"
+python -m src.todo list          # 1. [ ] 우유 사기
+python -m src.todo done 1         # 1번 완료 표시
+python -m src.todo rm 1           # 1번 삭제
+```
+
+저장 파일은 `--file` 인자 → `TODO_FILE` 환경변수 → 기본 `~/.todo.json` 순으로 결정됩니다.
 
 ## Test
 
