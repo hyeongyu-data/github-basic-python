@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   issues: write
+  pull-requests: write   # PR에 라벨·담당자 부여 시 필요
 
 jobs:
   assign-and-label:
